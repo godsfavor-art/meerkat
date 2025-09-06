@@ -60,20 +60,20 @@ export default function Timeline() {
   return (
     <div className="relative w-full mx-auto mt-16">
       {/* central line */}
-      <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-r from-[#FDC700] via-[#FF6900] to-[#FB2C36] transform -translate-x-1/2 opacity-20"></div>
+      <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-r from-[#FDC700] via-[#FF6900] to-[#FB2C36] transform -translate-x-1/2 opacity-20"></div>
 
-      <div className="space-y-16">
+      <div className="space-y-10 md:space-y-16">
         {items.map((item, i) => (
           <div
             key={i}
             className={`relative flex items-start ${
-              i % 2 === 0 ? "justify-start" : "justify-end"
+              i % 2 === 0 ? "md:justify-start" : "md:justify-end"
             }`}
           >
             {/* content */}
             <div
-              className={`w-5/12 flex items-center gap-4 ${
-                i % 2 === 0 ? "justify-start" : "justify-end"
+              className={`md:w-5/12 flex items-center gap-4 ${
+                i % 2 === 0 ? "md:justify-start" : "md:justify-end"
               }`}
             >
               <Image src={item.icon} alt="rocket" />
@@ -100,7 +100,7 @@ export default function Timeline() {
 
             {/* circle indicator */}
             <div
-              className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-black ${item.color}`}
+              className={`hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-black ${item.color}`}
               style={{ background: item.color, borderColor: item.border_color }}
             ></div>
           </div>

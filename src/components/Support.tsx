@@ -79,7 +79,7 @@ const Support = () => {
   
   return (
     <div className="bg-[#A184C4] py-24">
-      <div className="w-10/12 mx-auto">
+      <div className="w-11/12 md:w-10/12 mx-auto">
         <div className="flex flex-col items-center">
           <div className="bg-white rounded-2xl py-1 px-3 w-[140px] flex justify-center items-center">
             <p className="text-base font-bold text-[#1F140D] font-heading uppercase pt-1.5 w-full text-center">
@@ -87,10 +87,10 @@ const Support = () => {
             </p>
           </div>
           <div className="my-4">
-            <p className="text-[90px] text-center font-bold font-heading uppercase text-white">
+            <p className="text-[43px] md:text-[90px] text-center font-bold font-heading uppercase text-white">
               Frequently
             </p>
-            <p className="text-[90px] text-center font-bold font-heading uppercase text-white -mt-12">
+            <p className="text-[43px] md:text-[90px] text-center font-bold font-heading uppercase text-white -mt-6 md:-mt-12">
               Asked Questions
             </p>
           </div>
@@ -111,7 +111,7 @@ const Support = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="mt-14 w-8/12 mx-auto"
+          className="mt-14 md:w-8/12 mx-auto"
         >
           {faqs.map((faq, index) => (
             <motion.div

@@ -28,7 +28,7 @@ const data = [
 const EconomicModel = () => {
   return (
     <div className="bg-[#C14432] py-24" id="tokenomics">
-      <div className="w-10/12 mx-auto grid grid-cols-2 items-center gap-8">
+      <div className="w-11/12 md:w-10/12 mx-auto grid md:grid-cols-2 items-center gap-14 md:gap-8">
         <div className="flex flex-col gap-4">
           <div className="bg-white rounded-2xl py-1 px-3 w-[165px] flex justify-center items-center">
             <p className="text-base font-bold font-heading uppercase pt-1.5 w-full text-center">
@@ -36,10 +36,10 @@ const EconomicModel = () => {
             </p>
           </div>
           <div>
-            <p className="text-[90px] font-bold font-heading uppercase text-white">
+            <p className="text-[60px] md:text-[90px] font-bold font-heading uppercase text-white">
               Sustainable
             </p>
-            <p className="text-[90px] font-bold font-heading uppercase text-white -mt-12">
+            <p className="text-[60px] md:text-[90px] font-bold font-heading uppercase text-white -mt-6 md:-mt-12">
               Tokenomics
             </p>
           </div>
@@ -111,7 +111,7 @@ const EconomicModel = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6 md:gap-4">
           {data.map((item, i) => (
             <div
               className="bg-white/5 rounded-[30px] border border-white/20 p-5"
