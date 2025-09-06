@@ -1,16 +1,45 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const theboldFont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/the_bold_font.woff",
+      // weight: "200",
+      style: "normal",
+    }
+  ],
+  variable: "--font-theboldfont",
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const euclidFont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Euclid Circular A Light.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Euclid Circular A Regular.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Euclid Circular A Medium.ttf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/Euclid Circular A Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-euclid",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,12 +53,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${theboldFont.variable} ${euclidFont.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

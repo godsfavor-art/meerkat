@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ["var(--font-theboldfont)", "serif"],
+        body: ["var(--font-euclid)", "sans-serif"],
+        sans: ["var(--font-body)", "ui-sans-serif", "system-ui"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
