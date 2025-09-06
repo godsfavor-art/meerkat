@@ -58,7 +58,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="relative w-full mx-auto mt-16">
+    <div className="relative w-10/12 mx-auto mt-16">
       {/* central line */}
       <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-r from-[#FDC700] via-[#FF6900] to-[#FB2C36] transform -translate-x-1/2 opacity-20"></div>
 

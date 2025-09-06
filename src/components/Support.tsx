@@ -81,7 +81,7 @@ const Support = () => {
     <div className="bg-[#A184C4] py-24">
       <div className="w-11/12 md:w-10/12 mx-auto">
         <div className="flex flex-col items-center">
-          <div className="bg-white rounded-2xl py-1 px-3 w-[140px] flex justify-center items-center">
+          <div className="bg-white rounded-full h-8 px-2 w-[100px] flex justify-center items-center">
             <p className="text-base font-bold text-[#1F140D] font-heading uppercase pt-1.5 w-full text-center">
               Support
             </p>
@@ -125,7 +125,11 @@ const Support = () => {
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="text-xl text-white">
-                  {openIndex === index ? <ChevronUp /> : <ChevronRight />}
+                  {openIndex === index ? (
+                    <ChevronUp size={16} />
+                  ) : (
+                    <ChevronRight size={16} />
+                  )}
                 </span>
                 {faq.question}
               </button>

@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="w-11/12 md:w-10/12 mx-auto flex flex-col gap-0">
         <motion.p
           variants={variants}
-          className="text-[40px] md:text-[96px] font-light font-body text-black"
+          className="text-[40px] md:text-[96px] font-light font-body text-black uppercase"
         >
           Milli the
         </motion.p>
@@ -27,7 +27,7 @@ const Hero = () => {
         </motion.p>
         <motion.p
           variants={variants}
-          className="text-font-normal text-lg font-body md:w-[38%] md:-mt-10 text-justify"
+          className="text-font-normal text-lg font-body md:w-[43%] md:-mt-10 text-justify"
         >
           Milli represents the convergence of sophisticated financial
           engineering and community-driven innovation. Every decision is

@@ -90,7 +90,7 @@ const buttonVariants: Record<ButtonVariant, string> = {
     hover:shadow-[0_4px_0_0_#000000,0_12px_20px_0_rgba(0,0,0,0.25)]
     active:shadow-[0_2px_0_0_#000000,0_4px_8px_0_rgba(0,0,0,0.2)]
     active:translate-y-[2px]
-    border-2 border-[#8E2F2F]
+    border-2 border-[#000000]
   `,
   outline:
     "border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white bg-transparent",
@@ -99,9 +99,9 @@ const buttonVariants: Record<ButtonVariant, string> = {
 
 // Size styles - matched to your design proportions
 const buttonSizes: Record<ButtonSize, string> = {
-  sm: "px-4 py-2 text-sm rounded-[20px] min-h-[40px]",
-  md: "px-6 py-3 text-base rounded-[25px] min-h-[50px]", // Your design size
-  lg: "px-8 py-4 text-lg rounded-[30px] min-h-[60px]",
+  sm: "px-4 py-2 text-sm rounded-full min-h-[40px]",
+  md: "px-6 py-3 text-base rounded-full min-h-[50px]", // Your design size
+  lg: "px-8 py-4 text-lg rounded-full min-h-[60px]",
 };
 
 // Icon sizes

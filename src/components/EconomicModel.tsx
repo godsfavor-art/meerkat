@@ -30,7 +30,7 @@ const EconomicModel = () => {
     <div className="bg-[#C14432] py-24" id="tokenomics">
       <div className="w-11/12 md:w-10/12 mx-auto grid md:grid-cols-2 items-center gap-14 md:gap-8">
         <div className="flex flex-col gap-4">
-          <div className="bg-white rounded-2xl py-1 px-3 w-[165px] flex justify-center items-center">
+          <div className="bg-white rounded-full h-8 px-2 w-[165px] flex justify-center items-center">
             <p className="text-base font-bold font-heading uppercase pt-1.5 w-full text-center">
               Economic Model
             </p>

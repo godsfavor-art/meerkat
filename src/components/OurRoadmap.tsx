@@ -8,7 +8,7 @@ const OurRoadmap = () => {
     <div className="bg-black py-24" id="roadmap">
       <div className="w-11/12 md:w-10/12 mx-auto">
         <div className="flex flex-col items-center">
-          <div className="bg-white rounded-2xl py-1 px-3 w-[140px] flex justify-center items-center">
+          <div className="bg-white rounded-full h-8 px-2 w-[140px] flex justify-center items-center">
             <p className="text-base font-bold text-[#1F140D] font-heading uppercase pt-1.5 w-full text-center">
               Development
             </p>

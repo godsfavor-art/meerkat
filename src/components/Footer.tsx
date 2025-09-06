@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="bg-[#FFEBDC] py-24">
       <div className="w-10/12 mx-auto flex flex-col gap-4">
-        <p className="text-[40px] md:text-[90px] font-light font-body text-black">Buy the</p>
+        <p className="text-[40px] md:text-[90px] font-light font-body text-black uppercase">Buy the</p>
         <p className="text-[60px] md:text-[160px] font-bold font-heading text-black -mt-5 md:-mt-10">
           Meerkat
         </p>
