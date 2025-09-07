@@ -3,8 +3,11 @@ import Button from './ui/Button';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import { pumpfun, total_supply } from '@/utils/icons';
+import useComingSoonModal from '@/hooks/useComingSoonModal';
+import ComingSoonModal from './ui/ComingSoonModal';
 
 const Pumpfun = () => {
+  const { isOpen, openModal, closeModal } = useComingSoonModal();
   return (
     <div className="bg-[#218152] py-24" id="tokenomics">
       <div className="w-11/12 md:w-10/12 mx-auto grid md:grid-cols-2 items-center gap-14 md:gap-8">
@@ -41,6 +44,7 @@ const Pumpfun = () => {
               size="md"
               icon={ArrowUpRight}
               iconPosition="right"
+              onClick={openModal}
             >
               Launching on pumpfun
             </Button>
@@ -51,6 +55,8 @@ const Pumpfun = () => {
           <Image src={pumpfun} alt="pumpfun" />
         </div>
       </div>
+
+      <ComingSoonModal isOpen={isOpen} onClose={closeModal} />
     </div>
   );
 }
