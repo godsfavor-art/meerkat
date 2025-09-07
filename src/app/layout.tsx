@@ -43,8 +43,9 @@ const euclidFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Meerkat",
-  description: "Milli represents the convergence of sophisticated financial engineering",
+  title: "Otterio",
+  // description:
+  //   "Milli represents the convergence of sophisticated financial engineering",
 };
 
 export default function RootLayout({

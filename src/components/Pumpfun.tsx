@@ -24,9 +24,17 @@ const Pumpfun = () => {
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center gap-10 md:gap-5 mt-6">
-            <Image src={total_supply} alt="total_supply" className='hidden md:flex justify-center' />
+            <Image
+              src={total_supply}
+              alt="total_supply"
+              className="hidden md:flex justify-center"
+            />
             <div className="md:hidden flex justify-center items-center">
-              <Image src={total_supply} alt="total_supply" className='flex justify-center' />
+              <Image
+                src={total_supply}
+                alt="total_supply"
+                className="flex justify-center"
+              />
             </div>
             <Button
               variant="orange"
@@ -34,7 +42,7 @@ const Pumpfun = () => {
               icon={ArrowUpRight}
               iconPosition="right"
             >
-              BUY MILLI NOW
+              Launching on pumpfun
             </Button>
           </div>
         </div>

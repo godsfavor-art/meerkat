@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 import Button from "./ui/Button";
 import { ArrowUpRight } from "lucide-react";
+import useComingSoonModal from "@/hooks/useComingSoonModal";
+import ComingSoonModal from "./ui/ComingSoonModal";
 
 const data = [
   "Otterio: It's not just a meme, it's a lifestyle.",
@@ -10,6 +12,7 @@ const data = [
 ];
 
 const About = () => {
+  const { isOpen, openModal, closeModal } = useComingSoonModal();
   return (
     <div className="bg-[#7BAF92] py-24 about_img" id="about">
       <div className="w-11/12 md:w-10/12 mx-auto grid md:grid-cols-2 gap-14 md:gap-4">
@@ -51,8 +54,9 @@ const About = () => {
               size="md"
               icon={ArrowUpRight}
               iconPosition="right"
+              onClick={openModal}
             >
-              BUY MILLI NOW
+              Buy Otterio Now
             </Button>
           </div>
         </div>
@@ -68,6 +72,8 @@ const About = () => {
           </div>
         </div> */}
       </div>
+
+      <ComingSoonModal isOpen={isOpen} onClose={closeModal} />
     </div>
   );
 };

@@ -28,7 +28,7 @@ const OurRoadmap = () => {
               icon={ArrowUpRight}
               iconPosition="right"
             >
-              BUY MILLI NOW
+              Buy Otterio Now
             </Button>
           </div>
         </div>

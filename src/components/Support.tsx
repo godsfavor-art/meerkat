@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import Button from './ui/Button'
 import { ArrowUpRight, ChevronRight, ChevronUp } from 'lucide-react'
 import { motion, Variants } from "motion/react";
+import ComingSoonModal from './ui/ComingSoonModal';
+import useComingSoonModal from '@/hooks/useComingSoonModal';
 
 const faqs = [
   {
@@ -50,6 +52,7 @@ const itemVariants: Variants = {
 
 const Support = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { isOpen, openModal, closeModal } = useComingSoonModal();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -78,6 +81,7 @@ const Support = () => {
               size="md"
               icon={ArrowUpRight}
               iconPosition="right"
+              onClick={openModal}
             >
               Buy Otterio Now
             </Button>
@@ -146,6 +150,8 @@ const Support = () => {
           ))}
         </motion.div>
       </div>
+
+      <ComingSoonModal isOpen={isOpen} onClose={closeModal} />
     </div>
   );
 }

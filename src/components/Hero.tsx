@@ -1,9 +1,13 @@
+"use client";
 import { hero_main } from '@/utils/images';
 import Image from 'next/image';
 import React from 'react'
 import * as motion from "motion/react-client";
 import Button from './ui/Button';
 import { ArrowUpRight } from 'lucide-react';
+import ComingSoonModal from './ui/ComingSoonModal';
+import Link from 'next/link';
+import useComingSoonModal from '@/hooks/useComingSoonModal';
 
 const variants = {
   init: { y: 20, opacity: 0 },
@@ -12,6 +16,7 @@ const variants = {
 };
 
 const Hero = () => {
+  const { isOpen, openModal, closeModal } = useComingSoonModal();
   return (
     <div className="bg-gradient-to-r from-[#FFCB7F] to-[#FFFEA5] w-full pt-10">
       <div className="w-11/12 md:w-10/12 mx-auto flex flex-col gap-0">
@@ -47,18 +52,23 @@ const Hero = () => {
           size="md"
           icon={ArrowUpRight}
           iconPosition="right"
+          onClick={openModal}
         >
           Buy Otterio Now
         </Button>
-        <Button
-          variant="primary"
-          size="md"
-          icon={ArrowUpRight}
-          iconPosition="right"
-        >
-          Join Community
-        </Button>
+        <Link href={""}>
+          <Button
+            variant="primary"
+            size="md"
+            icon={ArrowUpRight}
+            iconPosition="right"
+          >
+            Join Community
+          </Button>
+        </Link>
       </div>
+
+      <ComingSoonModal isOpen={isOpen} onClose={closeModal} />
 
       <motion.div variants={variants}>
         <Image src={hero_main} alt="hero main" />
