@@ -2,34 +2,40 @@ import React from 'react'
 import Button from './ui/Button';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
-import { telegram, x } from '@/utils/icons';
+import { logo, telegram, x } from '@/utils/icons';
+import ButtonSocials from './ui/Socials';
 
 const Footer = () => {
   return (
-    <div className="bg-[#FFEBDC] py-24">
-      <div className="w-10/12 mx-auto flex flex-col gap-4">
-        <p className="text-[40px] md:text-[90px] font-light font-body text-black uppercase">Buy the</p>
-        <p className="text-[60px] md:text-[160px] font-bold font-heading text-black -mt-5 md:-mt-10">
-          Meerkat
-        </p>
-
-        <div className="flex items-center gap-4 md:-mt-10">
-          <div className="h-14 w-14 flex justify-center items-center rounded-full bg-[#4E342E1A]">
-            <Image src={x} alt='x.com' />
-          </div>
-          <div className="h-14 w-14 flex justify-center items-center rounded-full bg-[#4E342E1A]">
-            <Image src={telegram} alt='x.com' />
-          </div>
+    <div className="bg-[#FFBB54] py-24">
+      <div className="w-10/12 mx-auto flex flex-col justify-center items-center gap-4">
+        <div className="h-[74px] w-[74px] border-4 border-[#112F47] rounded-full">
+          <Image src={logo} alt="logo" className="cover w-full h-full" />
         </div>
 
-        <div className="mt-7">
+        <div className="flex items-center gap-8 mt-8">
+          <ButtonSocials variant="primary" size="md">
+            <Image src={x} alt="x-icon" />
+          </ButtonSocials>
+          <ButtonSocials variant="primary" size="md">
+            <Image src={telegram} alt="telegram-icon" />
+          </ButtonSocials>
+        </div>
+        <p className="text-[40px] md:text-[96px] mt-5 font-light font-heading text-black uppercase">
+          Join the
+        </p>
+        <p className="text-[40px] md:text-[96px]  font-bold font-heading text-black -mt-5 md:-mt-10">
+          Lodge
+        </p>
+
+        <div className="mt-1">
           <Button
-            variant="chocolate"
+            variant="primary"
             size="md"
             icon={ArrowUpRight}
             iconPosition="right"
           >
-            BUY MILLI NOW
+            Buy Otterio Now
           </Button>
         </div>
       </div>

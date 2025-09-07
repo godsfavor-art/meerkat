@@ -1,7 +1,9 @@
-import { hero_main, hero_sub } from '@/utils/images';
+import { hero_main } from '@/utils/images';
 import Image from 'next/image';
 import React from 'react'
 import * as motion from "motion/react-client";
+import Button from './ui/Button';
+import { ArrowUpRight } from 'lucide-react';
 
 const variants = {
   init: { y: 20, opacity: 0 },
@@ -11,48 +13,56 @@ const variants = {
 
 const Hero = () => {
   return (
-    <div className="bg-[#FFEBDC] w-full py-10">
+    <div className="bg-gradient-to-r from-[#FFCB7F] to-[#FFFEA5] w-full pt-10">
       <div className="w-11/12 md:w-10/12 mx-auto flex flex-col gap-0">
         <motion.p
           variants={variants}
-          className="text-[40px] md:text-[96px] font-light font-body text-black uppercase"
+          className="text-[40px] md:text-[96px] font-light font-heading text-black uppercase"
         >
-          Milli the
+          The Otterio
         </motion.p>
         <motion.p
           variants={variants}
-          className="text-[60px] md:text-[160px] font-bold font-heading md:-mt-10 "
+          className="text-[40px] md:text-[96px] font-bold font-heading md:-mt-10 "
         >
-          Meerkat
+          Uprising: From
         </motion.p>
         <motion.p
           variants={variants}
-          className="text-font-normal text-lg font-body md:w-[43%] md:-mt-10 text-justify"
+          className="text-[40px] md:text-[96px] font-bold font-heading md:-mt-10 "
         >
-          Milli represents the convergence of sophisticated financial
-          engineering and community-driven innovation. Every decision is
-          deliberate, every feature purposeful.
+          Riverbank to
         </motion.p>
-
-        <motion.div
+        <motion.p
           variants={variants}
-          className="mt-20 grid md:grid-cols-12 gap-4 pb-8"
+          className="text-[40px] md:text-[96px] font-bold font-heading md:-mt-10 "
         >
-          <div className="md:col-span-9">
-            <Image src={hero_main} alt="hero main" />
-          </div>
-          <motion.div
-            variants={variants}
-            className="md:col-span-3 flex flex-col gap-4"
-          >
-            <Image src={hero_sub} alt="hero main" />
-            <p className="text-xl font-medium text-right uppercase font-body">
-              The most sophisticated meerkat in the crypto ecosystem. Combining
-              luxury, community, and financial innovation.
-            </p>
-          </motion.div>
-        </motion.div>
+          Solana
+        </motion.p>
       </div>
+
+      <div className="w-11/12 md:w-10/12 mx-auto mt-4 mb-10 flex flex-col md:flex-row md:items-center gap-8">
+        <Button
+          variant="secondary"
+          size="md"
+          icon={ArrowUpRight}
+          iconPosition="right"
+        >
+          Buy Otterio Now
+        </Button>
+        <Button
+          variant="primary"
+          size="md"
+          icon={ArrowUpRight}
+          iconPosition="right"
+        >
+          Join Community
+        </Button>
+      </div>
+
+      <motion.div variants={variants}>
+        <Image src={hero_main} alt="hero main" />
+      </motion.div>
     </div>
   );
 }

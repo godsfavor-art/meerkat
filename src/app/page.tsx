@@ -1,9 +1,9 @@
 import About from "@/components/About";
-import EconomicModel from "@/components/EconomicModel";
+import Pumpfun from "@/components/Pumpfun";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import OurRoadmap from "@/components/OurRoadmap";
+import Roadmap from "@/components/Roadmap";
 import Support from "@/components/Support";
 
 
@@ -14,8 +14,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <EconomicModel />
-      <OurRoadmap />
+      <Pumpfun />
+      <Roadmap />
       <Support />
       <Footer />
     </div>

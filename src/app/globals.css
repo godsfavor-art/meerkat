@@ -43,6 +43,14 @@
     }
 }
 
+.about_img {
+    background-image: url('/images/about.png');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    /* animation: scroll-up 40s linear infinite; */
+}
+
 .animate-scroll-up {
     animation: scroll-up 40s linear infinite;
 }

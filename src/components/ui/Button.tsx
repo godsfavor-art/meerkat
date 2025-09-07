@@ -27,7 +27,29 @@ const buttonVariants: Record<ButtonVariant, string> = {
   // Exact match to your design
   // bg-gradient-to-b from-[#C85A5A] via-[#B54848] to-[#A03838]
   primary: `
-    bg-[#C14432]
+    bg-[#FF6900]
+    hover:from-[#D66666] hover:via-[#C85A5A] hover:to-[#B54848]
+    active:from-[#A03838] active:via-[#8E2F2F] active:to-[#7A2626]
+    text-white font-bold text-xl
+    shadow-[8px_4px_0_0_#01454E,0_8px_12px_0_rgba(0,0,0,0.15)]
+    hover:shadow-[0_4px_0_0_#01454E,0_12px_20px_0_rgba(0,0,0,0.25)]
+    active:shadow-[0_2px_0_0_#01454E,0_4px_8px_0_rgba(0,0,0,0.2)]
+    active:translate-y-[2px]
+    border-2 border-[#8E2F2F]
+  `,
+  secondary: `
+    bg-[#33B0C0]
+    hover:from-[#D66666] hover:via-[#C85A5A] hover:to-[#B54848]
+    active:from-[#A03838] active:via-[#8E2F2F] active:to-[#7A2626]
+    text-white font-bold text-xl
+    shadow-[8px_4px_0_0_#01454E,0_8px_12px_0_rgba(0,0,0,0.15)]
+    hover:shadow-[0_4px_0_0_#01454E,0_12px_20px_0_rgba(0,0,0,0.25)]
+    active:shadow-[0_2px_0_0_#01454E,0_4px_8px_0_rgba(0,0,0,0.2)]
+    active:translate-y-[2px]
+    border-2 border-[#01454E]
+  `,
+  orange: `
+    bg-[#7FFE69]
     hover:from-[#D66666] hover:via-[#C85A5A] hover:to-[#B54848]
     active:from-[#A03838] active:via-[#8E2F2F] active:to-[#7A2626]
     text-white font-bold text-xl
@@ -35,29 +57,7 @@ const buttonVariants: Record<ButtonVariant, string> = {
     hover:shadow-[0_4px_0_0_#000000,0_12px_20px_0_rgba(0,0,0,0.25)]
     active:shadow-[0_2px_0_0_#000000,0_4px_8px_0_rgba(0,0,0,0.2)]
     active:translate-y-[2px]
-    border-2 border-[#8E2F2F]
-  `,
-  secondary: `
-    bg-[#4CAF50]
-    hover:from-[#D66666] hover:via-[#C85A5A] hover:to-[#B54848]
-    active:from-[#A03838] active:via-[#8E2F2F] active:to-[#7A2626]
-    text-white font-bold text-xl
-    shadow-[8px_4px_0_0_#E0E0E0,0_8px_12px_0_rgba(0,0,0,0.15)]
-    hover:shadow-[0_4px_0_0_#E0E0E0,0_12px_20px_0_rgba(0,0,0,0.25)]
-    active:shadow-[0_2px_0_0_#E0E0E0,0_4px_8px_0_rgba(0,0,0,0.2)]
-    active:translate-y-[2px]
-    border-2 border-[#E0E0E0]
-  `,
-  orange: `
-    bg-[#E85D4A]
-    hover:from-[#D66666] hover:via-[#C85A5A] hover:to-[#B54848]
-    active:from-[#A03838] active:via-[#8E2F2F] active:to-[#7A2626]
-    text-white font-bold text-xl
-    shadow-[8px_4px_0_0_#E0E0E0,0_8px_12px_0_rgba(0,0,0,0.15)]
-    hover:shadow-[0_4px_0_0_#E0E0E0,0_12px_20px_0_rgba(0,0,0,0.25)]
-    active:shadow-[0_2px_0_0_#E0E0E0,0_4px_8px_0_rgba(0,0,0,0.2)]
-    active:translate-y-[2px]
-    border-2 border-[#E0E0E0]
+    border-2 border-[#000000]
   `,
   blue: `
     bg-[#2962FF]
@@ -71,15 +71,15 @@ const buttonVariants: Record<ButtonVariant, string> = {
     border-2 border-[#E0E0E0]
   `,
   purple: `
-    bg-[#5A3E85]
+    bg-[#A184C4]
     hover:from-[#D66666] hover:via-[#C85A5A] hover:to-[#B54848]
     active:from-[#A03838] active:via-[#8E2F2F] active:to-[#7A2626]
     text-white font-bold text-xl
-    shadow-[8px_4px_0_0_#E0E0E0,0_8px_12px_0_rgba(0,0,0,0.15)]
-    hover:shadow-[0_4px_0_0_#E0E0E0,0_12px_20px_0_rgba(0,0,0,0.25)]
-    active:shadow-[0_2px_0_0_#E0E0E0,0_4px_8px_0_rgba(0,0,0,0.2)]
+    shadow-[8px_4px_0_0_#000000,0_8px_12px_0_rgba(0,0,0,0.15)]
+    hover:shadow-[0_4px_0_0_#000000,0_12px_20px_0_rgba(0,0,0,0.25)]
+    active:shadow-[0_2px_0_0_#000000,0_4px_8px_0_rgba(0,0,0,0.2)]
     active:translate-y-[2px]
-    border-2 border-[#E0E0E0]
+    border-2 border-[#000000]
   `,
   chocolate: `
     bg-[#4E342E]
@@ -100,7 +100,7 @@ const buttonVariants: Record<ButtonVariant, string> = {
 // Size styles - matched to your design proportions
 const buttonSizes: Record<ButtonSize, string> = {
   sm: "px-4 py-2 text-sm rounded-full min-h-[40px]",
-  md: "px-6 py-3 text-base rounded-full min-h-[50px]", // Your design size
+  md: "px-6 py-3 text-base rounded-full min-h-[50px] uppercase", // Your design size
   lg: "px-8 py-4 text-lg rounded-full min-h-[60px]",
 };
 
@@ -118,7 +118,7 @@ const Button: React.FC<ButtonProps> = ({
   loading = false,
   disabled = false,
   icon = ArrowUpRight,
-  iconPosition = "right",
+  iconPosition,
   href,
   external = false,
   fullWidth = false,
